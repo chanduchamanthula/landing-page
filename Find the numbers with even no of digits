@@ -1,0 +1,23 @@
+int CountDigits(int nums)
+{
+    int c=0;
+    while(nums!=0)
+    {
+        nums=nums/10;
+        c++;
+    }
+    return c;
+}
+
+
+int findNumbers(int* nums, int numsSize)
+ {
+    int ecount=0;
+    for(int i=0;i<numsSize;i++)
+    {
+        int y=CountDigits(nums[i]);
+        if(y%2==0)
+        ecount++;
+    }
+    return ecount;
+    }
